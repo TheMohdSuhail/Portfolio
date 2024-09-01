@@ -31,15 +31,15 @@ function App() {
 
   useEffect(() => {
     if (!portfolioData) {
-      getPortfolioData()
-    }
-  }, [portfolioData]);
-
-  useEffect(()=>{
-    if(reloadData){
       getPortfolioData();
     }
-  },[reloadData])
+  }, [portfolioData, getPortfolioData]);
+
+  useEffect(() => {
+    if (reloadData) {
+      getPortfolioData();
+    }
+  }, [reloadData, getPortfolioData]);
 
 
 //  useEffect(() =>{
