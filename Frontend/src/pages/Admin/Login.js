@@ -15,7 +15,7 @@ const Login = () => {
     const login = async () => {
         try {
             dispatch(ShowLoading()); // Show loading indicator
-            const response = await axios.post('/api/portfolio/admin-login', user); // API call
+            const response = await axios.post('https://portfolio-0fue.onrender.com/api/portfolio/admin-login', user); // API call
             dispatch(HideLoading()); // Hide loading indicator
 
             if (response.data.success) {
