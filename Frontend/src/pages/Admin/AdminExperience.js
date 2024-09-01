@@ -18,7 +18,7 @@ const Experience = () => {
             dispatch(ShowLoading());
             let response;
             if (selectedForEdit) {
-                response = await axios.post("/api/portfolio/update-experience", {
+                response = await axios.post("https://portfolio-0fue.onrender.com/api/portfolio/update-experience", {
                     ...values,
                     _id: selectedForEdit._id,
                 });
