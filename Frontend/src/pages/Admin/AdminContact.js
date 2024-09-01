@@ -11,7 +11,7 @@ const AdminContact = () => {
   const onFinish = async (values) => {
     try {
       dispatch(ShowLoading());
-      const response = await axios.post('/api/portfolio/update-contact', {
+      const response = await axios.post('https://portfolio-0fue.onrender.com/api/portfolio/update-contact', {
         ...values,
         _id: portfolioData.contact._id,  // Safe check using optional chaining
       });
