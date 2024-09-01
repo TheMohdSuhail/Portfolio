@@ -16,7 +16,7 @@ const AdminAbout = () => {
       const tempskills = values.skills.split(',');
       values.skills= tempskills;
       dispatch(ShowLoading());
-      const response = await axios.post('/api/portfolio/update-about', {
+      const response = await axios.post('https://portfolio-0fue.onrender.com/api/portfolio/update-about', {
         ...values,
         _id: portfolioData.about._id,  // Safe check using optional chaining
       });
