@@ -21,7 +21,7 @@ const AdminCourses = () => {
             dispatch(ShowLoading());
             let response;
             if (selectedForEdit) {
-                response = await axios.post("/api/portfolio/update-course", {
+                response = await axios.post("https://portfolio-0fue.onrender.com/api/portfolio/update-course", {
                     ...values,
                     _id: selectedForEdit._id,
                 });
