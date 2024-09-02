@@ -3,21 +3,35 @@ const app = express();
 const cors = require('cors');
 require('dotenv').config();
 const dbConfig = require('./config/dbConfig');
+const path = require("path"); // Import path module
 
+// Configure CORS
 app.use(cors({
-  origin: 'https://msp-portfolio.onrender.com', // Replace with your frontend domain
+  origin: 'https://msp-portfolio.onrender.com', 
   credentials: true,
 }));
-const portfolioRoute = require("./routes/portfolioRoute");
 
+// Middleware to parse JSON
 app.use(express.json());
 
+// API routes
+const portfolioRoute = require("./routes/portfolioRoute");
 app.use("/api/portfolio", portfolioRoute);
 
-const port = process.env.PORT || 5000
+// Serve static files in production
+if (process.env.NODE_ENV === "production") {
+    // Serve static files from the React app
+    app.use(express.static(path.join(__dirname, "client/build")));
 
-app.listen(port, () =>{
+    // Handle React routing, return all requests to React app
+    app.get("*", (req, res) => {
+        res.sendFile(path.join(__dirname, "client/build", "index.html"));
+    });
+}
+
+const port = process.env.PORT || 5000;
+
+// Start the server
+app.listen(port, () => {
     console.log(`Server running on port ${port}`);
-    
-})
-
+});
