@@ -21,11 +21,11 @@ app.use("/api/portfolio", portfolioRoute);
 // Serve static files in production
 if (process.env.NODE_ENV === "production") {
     // Serve static files from the React app
-    app.use(express.static(path.join(__dirname, "client/build")));
+    app.use(express.static(path.join(__dirname, "Frontend/build")));
 
     // Handle React routing, return all requests to React app
     app.get("*", (req, res) => {
-        res.sendFile(path.join(__dirname, "client/build", "index.html"));
+        res.sendFile(path.join(__dirname, "Frontend/build", "index.html"));
     });
 }
 
