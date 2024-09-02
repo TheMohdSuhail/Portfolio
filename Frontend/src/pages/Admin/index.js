@@ -18,7 +18,7 @@ const Admin = () => {
 
     useEffect(() => {
         if (!localStorage.getItem("token")) {
-            window.location.href = "https://portfolio-0fue.onrender.com/admin-login"
+            window.location.href = "/admin-login"
         }
     })
 
@@ -34,7 +34,7 @@ const Admin = () => {
                 </div>
                 <h1 className='underline text-primary text-xl cursor-pointer' onClick={()=> {
                     localStorage.removeItem("token");
-                    window.location.href = "https://portfolio-0fue.onrender.com/admin-login"
+                    window.location.href = "/admin-login"
                 }}>Logout</h1>
             </div>
             {portfolioData && <div className='px-5 pb-10'>
