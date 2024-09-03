@@ -20,10 +20,10 @@ app.use("/api/portfolio", portfolioRoute);
 
 // Serve static files in production
 if (process.env.NODE_ENV === "production") {
-    app.use(express.static(path.join(__dirname, "./build"))); // Update the path
+    app.use(express.static(path.join(__dirname, "../Frontend/build")));
 
     app.get("*", (req, res) => {
-        res.sendFile(path.join(__dirname, "./build/index.html")); // Update the path
+        res.sendFile(path.join(__dirname, "../Frontend/build/index.html"));
     });
 }
 
