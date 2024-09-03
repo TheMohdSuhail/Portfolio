@@ -1,5 +1,4 @@
 import React from 'react'
-import { NavLink, Link } from 'react-router-dom';
 import { useSelector } from 'react-redux'
 
 const Introduction = () => {
@@ -14,11 +13,7 @@ const Introduction = () => {
         <p className="text-white w-2/3">
         {description || ''}
         </p>
-          <NavLink to='/admin' className='flex flex-col items-center gap-1'>
-                <p>Admin</p>
-                    <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden' />
-            </NavLink>
-          
+         
         <button className='border-2 border-tertiary text-tertiary px-10 py-3 rounded'>Get Started.</button>
     </div>
   );
