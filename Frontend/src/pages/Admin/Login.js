@@ -20,7 +20,7 @@ const Login = () => {
 
             if (response.data.success) {
                 message.success(response.data.message); // Show success message
-                llocalStorage.setItem('token', JSON.stringify(response.data.data)); // Store token only
+                localStorage.setItem('token', JSON.stringify(response.data.data)); // Store token only
                 window.location.href='/admin'; // Redirect to admin page
             } else {
                 message.error(response.data.message); // Show error message
