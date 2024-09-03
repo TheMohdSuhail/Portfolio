@@ -20,8 +20,8 @@ const Login = () => {
 
             if (response.data.success) {
                 message.success(response.data.message); // Show success message
-                localStorage.setItem('token', JSON.stringify(response.data.data)); // Store token or user data
-                window.location.href = 'https://msp-portfolio.onrender.com/admin'; // Redirect to admin page
+                localStorage.setItem('token', response.data.data.token); // Store token only
+                window.location.replace('https://msp-portfolio.onrender.com/admin'); // Redirect to admin page
             } else {
                 message.error(response.data.message); // Show error message
             }
