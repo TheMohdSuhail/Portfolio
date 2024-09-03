@@ -30,7 +30,9 @@ const Project = () => {
                 {/* Second Part */}
                 
                 <div className='flex items-center justify-center gap-10 sm:flex-col'>
-                    <img className='h-60 w-72' src={projects[selectedItemIndex].image} alt="" />
+                    <a href={projects[selectedItemIndex].link} target="_blank" rel="noopener noreferrer">
+                        <img className='h-60 w-72' src={projects[selectedItemIndex].image} alt={projects[selectedItemIndex].title} />
+                    </a>
                 <div className='flex flex-col gap-5'>
                         <h1 className='text-secondary text-xl '>{projects[selectedItemIndex].title}</h1>
                        <p className="text-white">{projects[selectedItemIndex].description}</p>
