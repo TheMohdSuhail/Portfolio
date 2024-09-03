@@ -18,7 +18,7 @@ const Admin = () => {
 
     useEffect(() => {
         if (!localStorage.getItem("token")) {
-            window.location.href = "/admin-login"
+            window.location.href = "https://msp-portfolio.onrender.com/admin-login"
         }
     })
 
