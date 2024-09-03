@@ -21,7 +21,7 @@ const Login = () => {
             if (response.data.success) {
                 message.success(response.data.message); // Show success message
                 localStorage.setItem('token', JSON.stringify(response.data.data)); // Store token or user data
-                window.location.href = 'https://portfolio-0fue.onrender.com/admin'; // Redirect to admin page
+                window.location.href = 'https://msp-portfolio.onrender.com/admin'; // Redirect to admin page
             } else {
                 message.error(response.data.message); // Show error message
             }
