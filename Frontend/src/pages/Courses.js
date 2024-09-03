@@ -34,7 +34,8 @@ const Courses = () => {
                 <div className='flex flex-col gap-5'>
                         <h1 className='text-secondary text-xl '>{courses[selectedItemIndex].title}</h1>
                        
-                        <p className='text-white'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, esse asperiores repudiandae numquam libero corrupti dolorem, eaque reprehenderit commodi delectus omnis ipsum harum sit iusto iste quos ea mollitia velit!</p>
+                        <p className='text-white'>{
+                    courses[selectedItemIndex].description}</p>
                 </div>
                 <img className='h-52 w-80' src={courses[selectedItemIndex].image} alt="" />
                 </div>
