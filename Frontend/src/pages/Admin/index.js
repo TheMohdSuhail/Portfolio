@@ -17,7 +17,7 @@ const Admin = () => {
 
     useEffect(() => {
         if (!localStorage.getItem("token")) {
-            window.location.href = "https://msp-portfolio.onrender.com/admin-login";
+            window.location.href = "/admin-login";
         }
     }, []); // Dependency array added to run useEffect only once
 
@@ -33,7 +33,7 @@ const Admin = () => {
                     className='underline text-primary text-xl cursor-pointer'
                     onClick={() => {
                         localStorage.removeItem("token");
-                        window.location.href = "https://msp-portfolio.onrender.com/admin-login"; // Correct URL
+                        window.location.href = "/admin-login"; // Correct URL
                     }}
                 >
                     Logout
