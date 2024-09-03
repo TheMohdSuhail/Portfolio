@@ -34,7 +34,7 @@ const Project = () => {
                 <div className='flex flex-col gap-5'>
                         <h1 className='text-secondary text-xl '>{projects[selectedItemIndex].title}</h1>
                        <p className="text-white">{projects[selectedItemIndex].description}</p>
-                        <p className='text-white'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, esse asperiores repudiandae numquam libero corrupti dolorem, eaque reprehenderit commodi delectus omnis ipsum harum sit iusto iste quos ea mollitia velit!</p>
+                        <p className='text-white'></p>
                 </div>
                 </div>
             </div>
