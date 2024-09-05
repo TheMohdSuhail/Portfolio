@@ -25,7 +25,7 @@ const AdminProjects = () => {
                     _id: selectedForEdit._id,
                 });
             } else {
-                response = await axios.post('/api/portfolio/add-project', values);
+                response = await axios.post('https://portfolio-0fue.onrender.com/api/portfolio/add-project', values);
             }
 
             if (response.data.success) {
@@ -46,7 +46,7 @@ const AdminProjects = () => {
     const onDelete = async (item) => {
         try {
             dispatch(ShowLoading());
-            const response = await axios.post("/api/portfolio/delete-project", {
+            const response = await axios.post("https://portfolio-0fue.onrender.com/api/portfolio/delete-project", {
                 _id: item._id,
             });
 
