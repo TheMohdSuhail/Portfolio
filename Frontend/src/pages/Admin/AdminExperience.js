@@ -23,7 +23,7 @@ const Experience = () => {
                     _id: selectedForEdit._id,
                 });
             } else {
-                response = await axios.post('/api/portfolio/add-experience', values);
+                response = await axios.post('https://portfolio-0fue.onrender.com/api/portfolio/add-experience', values);
             }
 
             if (response.data.success) {
@@ -44,7 +44,7 @@ const Experience = () => {
     const onDelete = async (item) => {
         try {
             dispatch(ShowLoading());
-            const response = await axios.post("/api/portfolio/delete-experience", {
+            const response = await axios.post("https://portfolio-0fue.onrender.com/api/portfolio/delete-experience", {
                 _id: item._id,
             });
 
