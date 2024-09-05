@@ -26,7 +26,7 @@ const AdminCourses = () => {
                     _id: selectedForEdit._id,
                 });
             } else {
-                response = await axios.post('/api/portfolio/add-course', values);
+                response = await axios.post('https://portfolio-0fue.onrender.com/api/portfolio/add-course', values);
             }
 
             if (response.data.success) {
@@ -48,7 +48,7 @@ const AdminCourses = () => {
     const onDelete = async (item) => {
         try {
             dispatch(ShowLoading());
-            const response = await axios.post("/api/portfolio/delete-course", {
+            const response = await axios.post("https://portfolio-0fue.onrender.com/api/portfolio/delete-course", {
                 _id: item._id,
             });
 
